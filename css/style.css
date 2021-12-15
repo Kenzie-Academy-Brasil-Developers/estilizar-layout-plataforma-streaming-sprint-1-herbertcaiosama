@@ -14,25 +14,142 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+/*RESET*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	list-style: none;
+}
+
+
+
 /* VARIÁVEIS */
 :root{
-  
+  --color-background: #00002e;
+  --color-title: #fff;
+  --color-text-users: #8c8c8c;
+  --color-button: #00001f;
 }
 
 /*BODY*/
 	body{
+		background: var(--color-background);
+	}
 
+	h2 {
+		text-align: center;
+		padding: 50px;
+    	font-size: 34.1px;
+		color: var(--color-title);
+	}
+
+	h3 {
+		color: var(--color-text-users);
+		text-align: center;
+		font-size: smaller;
+		padding: 0 0 20px 0
+	}
+
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	li {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 186px;
+	}
+
+	li img {
+		width: 150px;
+	}
+
+	li:hover img {
+		border: 1.8px solid var(--color-title);
+		
+	}
+
+	li:hover h3 {
+		color: var(--color-title);
+	}
+
+	figcaption {
+		visibility: collapse;
+	}
+
+	.addPerfil img {
+		padding: 30px;
 	}
 
 /*TOPO*/
-	header.topo{
-		
+	header.topo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header.topo img{
+		width: 250px;	
 	}
 
 /*RODAPÉ*/
-	
+	footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button {
+		background: var(--color-background);
+		color: var(--color-title);
+		border: 2px solid var(--color-title);
+		padding: 14px 35px;
+		cursor: pointer;
+	}
+
+	button:hover {
+	 border: none;
+	 background: var(--color-button);
+	}
+
+	button:active {
+		border: 2px solid var(--color-text-users);
+	}
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
-		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: 858px) {
+		h2 {
+			text-align: center;
+			padding: 50px;
+			font-size: 60px;
+		}
+
+		ul {
+			width: 858px;
+		}
+
+		header.topo{
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 858px) {
+		ul {
+			width: 500px;		
+		}
 	}
